@@ -47,3 +47,13 @@ body {
 .dashboardTitle {
   text-align: center;
 }
+
+.dashboard {
+  position: relative;
+  max-width: 1500px;
+  max-height: 800;
+  min-width: 600;
+  min-height: 300;
+  margin-left: auto;
+  margin-right: auto;
+}
