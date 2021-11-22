@@ -1,68 +1,83 @@
 <!DOCTYPE html>
 <html>
   <head>
-	<title>UK Income Expenditure Dashboard</title>
+	  <title>UK Income Expenditure Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="tabs.js"></script>
   </head>
 
   <body>
-    <div class="tableauPlaceholder" id="viz1636327809893" style="position: relative; max-width: 1500px; max-height: 800; min-width: 600; min-height: 300; margin-left: auto; margin-right: auto;">
-      <noscript>
-        <a href="#">
-          <img alt="Detailed comparison of gross income and total expenditure  " src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;LC&#47;LCF_2010_DASHBOARD_COPY&#47;Dashboard2&#47;1_rss.png" style="border: none;" />
-        </a>
-      </noscript>
-      <object class="tableauViz" style="display: none;">
-        <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" /> <param name="embed_code_version" value="3" /> <param name="site_root" value="" /><param name="name" value="LCF_2010_DASHBOARD_COPY&#47;Dashboard2" />
-        <param name="tabs" value="no" /><param name="toolbar" value="yes" /><param name="static_image" value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;LC&#47;LCF_2010_DASHBOARD_COPY&#47;Dashboard2&#47;1.png" />
-        <param name="animate_transition" value="yes" /><param name="display_static_image" value="yes" /><param name="display_spinner" value="yes" /><param name="display_overlay" value="yes" /><param name="display_count" value="yes" />
-        <param name="language" value="es-ES" />
-      </object>
+    <div class="tab">
+      <button class="tablinks" onclick="openDashboard(event, 'main')">Main Dashboard</button>
+      <button class="tablinks" onclick="openDashboard(event, 'secondary')">Secondary Dashboard</button>
     </div>
-    <script type="text/javascript">
-      var divElement = document.getElementById("viz1636327809893");
-      var vizElement = divElement.getElementsByTagName("object")[0];
-      if (divElement.offsetWidth > 800) {
-        vizElement.style.width = "100%";
-        vizElement.style.height = divElement.offsetWidth * 0.75 + "px";
-      } else if (divElement.offsetWidth > 500) {
-        vizElement.style.width = "100%";
-        vizElement.style.height = divElement.offsetWidth * 0.75 + "px";
-      } else {
-        vizElement.style.width = "100%";
-        vizElement.style.height = "877px";
-      }
-      var scriptElement = document.createElement("script");
-      scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
-      vizElement.parentNode.insertBefore(scriptElement, vizElement);
-    </script>
-    <div class="tableauPlaceholder" id="viz1636327217370" style="position: relative; max-width: 1500px; max-height: 800; min-width: 600; min-height: 300; margin-left: auto; margin-right: auto;">
-      <noscript>
-        <a href="#"><img alt="Dashboard 1 " src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;LC&#47;LCF_2010_DASHBOARD_COPY&#47;Dashboard1&#47;1_rss.png" style="border: none;" /></a>
-      </noscript>
-      <object class="tableauViz" style="display: none;">
-        <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" /> <param name="embed_code_version" value="3" /> <param name="site_root" value="" /><param name="name" value="LCF_2010_DASHBOARD_COPY&#47;Dashboard1" />
-        <param name="tabs" value="no" /><param name="toolbar" value="yes" /><param name="static_image" value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;LC&#47;LCF_2010_DASHBOARD_COPY&#47;Dashboard1&#47;1.png" />
-        <param name="animate_transition" value="yes" /><param name="display_static_image" value="yes" /><param name="display_spinner" value="yes" /><param name="display_overlay" value="yes" /><param name="display_count" value="yes" />
-        <param name="language" value="es-ES" />
-      </object>
+    
+    <!-- Tab content -->
+    <div id="main" class="tabcontent">
+      <h3 class="dashboardTitle">Main dashboard</h3>
+      <div class="tableauPlaceholder" id="viz1636327217370" style="position: relative; max-width: 1500px; max-height: 800; min-width: 600; min-height: 300; margin-left: auto; margin-right: auto;">
+        <noscript>
+          <a href="#"><img alt="Dashboard 1 " src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;LC&#47;LCF_2010_DASHBOARD_COPY&#47;Dashboard1&#47;1_rss.png" style="border: none;" /></a>
+        </noscript>
+        <object class="tableauViz" style="display: none;">
+          <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" /> <param name="embed_code_version" value="3" /> <param name="site_root" value="" /><param name="name" value="LCF_2010_DASHBOARD_COPY&#47;Dashboard1" />
+          <param name="tabs" value="no" /><param name="toolbar" value="yes" /><param name="static_image" value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;LC&#47;LCF_2010_DASHBOARD_COPY&#47;Dashboard1&#47;1.png" />
+          <param name="animate_transition" value="yes" /><param name="display_static_image" value="yes" /><param name="display_spinner" value="yes" /><param name="display_overlay" value="yes" /><param name="display_count" value="yes" />
+          <param name="language" value="es-ES" />
+        </object>
+      </div>
+      <script type="text/javascript">
+        var divElement = document.getElementById("viz1636327217370");
+        var vizElement = divElement.getElementsByTagName("object")[0];
+        if (divElement.offsetWidth > 800) {
+          vizElement.style.width = "100%";
+          vizElement.style.height = divElement.offsetWidth * 0.75 + "px";
+        } else if (divElement.offsetWidth > 500) {
+          vizElement.style.width = "100%";
+          vizElement.style.height = divElement.offsetWidth * 0.75 + "px";
+        } else {
+          vizElement.style.width = "100%";
+          vizElement.style.height = "1127px";
+        }
+        var scriptElement = document.createElement("script");
+        scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+      </script>
     </div>
-    <script type="text/javascript">
-      var divElement = document.getElementById("viz1636327217370");
-      var vizElement = divElement.getElementsByTagName("object")[0];
-      if (divElement.offsetWidth > 800) {
-        vizElement.style.width = "100%";
-        vizElement.style.height = divElement.offsetWidth * 0.75 + "px";
-      } else if (divElement.offsetWidth > 500) {
-        vizElement.style.width = "100%";
-        vizElement.style.height = divElement.offsetWidth * 0.75 + "px";
-      } else {
-        vizElement.style.width = "100%";
-        vizElement.style.height = "1127px";
-      }
-      var scriptElement = document.createElement("script");
-      scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
-      vizElement.parentNode.insertBefore(scriptElement, vizElement);
-    </script>
+    
+    <div id="secondary" class="tabcontent">
+      <h3 class="dashboardTitle">Secondary dashboard</h3>
+      <div class="tableauPlaceholder" id="viz1636327809893" style="position: relative; max-width: 1500px; max-height: 800; min-width: 600; min-height: 300; margin-left: auto; margin-right: auto;">
+        <noscript>
+          <a href="#">
+            <img alt="Detailed comparison of gross income and total expenditure  " src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;LC&#47;LCF_2010_DASHBOARD_COPY&#47;Dashboard2&#47;1_rss.png" style="border: none;" />
+          </a>
+        </noscript>
+        <object class="tableauViz" style="display: none;">
+          <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" /> <param name="embed_code_version" value="3" /> <param name="site_root" value="" /><param name="name" value="LCF_2010_DASHBOARD_COPY&#47;Dashboard2" />
+          <param name="tabs" value="no" /><param name="toolbar" value="yes" /><param name="static_image" value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;LC&#47;LCF_2010_DASHBOARD_COPY&#47;Dashboard2&#47;1.png" />
+          <param name="animate_transition" value="yes" /><param name="display_static_image" value="yes" /><param name="display_spinner" value="yes" /><param name="display_overlay" value="yes" /><param name="display_count" value="yes" />
+          <param name="language" value="es-ES" />
+        </object>
+      </div>
+      <script type="text/javascript">
+        var divElement = document.getElementById("viz1636327809893");
+        var vizElement = divElement.getElementsByTagName("object")[0];
+        if (divElement.offsetWidth > 800) {
+          vizElement.style.width = "100%";
+          vizElement.style.height = divElement.offsetWidth * 0.75 + "px";
+        } else if (divElement.offsetWidth > 500) {
+          vizElement.style.width = "100%";
+          vizElement.style.height = divElement.offsetWidth * 0.75 + "px";
+        } else {
+          vizElement.style.width = "100%";
+          vizElement.style.height = "877px";
+        }
+        var scriptElement = document.createElement("script");
+        scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+      </script>
+    </div>
   </body>
 </html>
 
