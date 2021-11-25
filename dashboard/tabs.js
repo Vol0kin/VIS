@@ -1,17 +1,8 @@
-function openDashboard(evt, cityName) {  
-    // Get all elements with class="tabcontent" and hide them
-    const tabcontent = document.getElementsByClassName("tabcontent");
-    for (let i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-  
-    // Get all elements with class="tablinks" and remove the class "active"
-    const tablinks = document.getElementsByClassName("tablinks");
-    for (let i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-  
-    // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
+// Reference: https://www.w3schools.com/howto/howto_js_tabs.asp
+function openDashboard(dashboard) {
+  if (dashboard === 'main') {
+    window.location.href = './index.html';
+  } else if (dashboard === 'secondary') {
+    window.location.href = './secondary.html';
   }
+}

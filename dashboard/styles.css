@@ -38,10 +38,8 @@ body {
 
 /* Style the tab content */
 .tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
+  display: block;
+  padding: 30px;
 }
 
 .dashboardTitle {
@@ -50,10 +48,6 @@ body {
 
 .dashboard {
   position: relative;
-  max-width: 1500px;
-  max-height: 800;
-  min-width: 600;
-  min-height: 300;
   margin-left: auto;
   margin-right: auto;
 }
